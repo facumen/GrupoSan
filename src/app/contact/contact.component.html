@@ -8,7 +8,7 @@
 <section class="section">
     <div class="container">
 
-        <form (ngSubmit)=submitForm()>
+        <form (ngSubmit)="submitForm()" #contactForm="ngForm">
             <div class="fiels">
                 <div class="field ">
                     <label class="label">Nombre</label>
@@ -87,7 +87,7 @@
                 <label class="label">Consulta</label>
                 <textarea class="textarea" name="message" placeholder="¿Cual es su consulta?" [(ngModel)]="message"></textarea>
             </div>
-            <button type="submit" class="button is-danger is-large">Enviar</button>
+            <button type="submit" class="button is-danger is-large" [disabled]="contactForm.invalid">Enviar</button>
 
         </form>
 
