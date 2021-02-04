@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmailValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  name: string;
+  email: string;
+  prov: string;
+  codArea: number;
+  tel: number;
+  message: string;
+
+
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  submitForm() {
+    alert("Su consulta fue enviada. Nos contactaremos a la brevedad")
   }
 
 }
