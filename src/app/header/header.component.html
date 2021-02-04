@@ -1,13 +1,23 @@
 <nav class="navbar is-dark">
-    <div class="navbar-brand">
-        <a class="navbar-item">
-            <img src="../assets/img/logo.png" routerLink="/">
-        </a>
-    </div>
-    <div class="navbar-menu">
-        <div class="navbar-end">
-            <a class="navbar-item" routerLink="/">Inicio</a>
-            <a class="navbar-item" routerLink="/contact">Contacto</a>
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="../assets/img/logo.png" routerLink="/">
+            </a>
+            <span (click)="toggleNavbar()" #navBurger class="navbar-burger burger" data-targer="navMenu">
+                <span></span>
+            <span></span>
+            <span></span>
+            </span>
+        </div>
+        <div #navMenu class="navMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" routerLink="/">Inicio</a>
+                <a class="navbar-item" routerLink="/modelos">Modelos</a>
+                <a class="navbar-item" routerLink="/entregas">Entregas</a>
+                <a class="navbar-item" routerLink="/empresa">Empresa</a>
+                <a class="navbar-item" routerLink="/contact">Contacto</a>
+            </div>
         </div>
     </div>
 </nav>
